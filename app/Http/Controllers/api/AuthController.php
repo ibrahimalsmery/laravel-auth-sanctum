@@ -42,7 +42,7 @@ class AuthController extends Controller
             $user->token = $token->plainTextToken;
             return response()->json($user);
         } else {
-            return response()->json(['message' => 'Unauthenticated.']);
+            return response()->json(['message' => 'Unauthenticated.'], 401);
         }
     }
 }
